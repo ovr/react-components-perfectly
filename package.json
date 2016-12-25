@@ -19,7 +19,8 @@
     "babel-preset-stage-0": "^6.16.0",
     "react": "^15.4.1",
     "react-styleguidist": "^4.4.3",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "youtube-player": "^4.0.2"
   },
   "scripts": {
     "styleguide-server": "styleguidist server",

@@ -1,5 +1,9 @@
 Basic YoutubePlayer:
 
+```javascript
+<YoutubePlayer videoId="RnBT9uUYb1w"/>
+```
+
     <YoutubePlayer>Push Me</YoutubePlayer>
 
 If you define a fenced code block with a language flag it will be rendered as a regular Markdown code snippet:
