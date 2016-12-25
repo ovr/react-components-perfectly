@@ -2,7 +2,14 @@
 import React from 'react';
 import {default as YoutubePlayerBindings} from 'youtube-player';
 
+/**
+ * @property {string} videoId
+ */
 export default class YoutubePlayer extends React.Component {
+    static propTypes = {
+        videoId: React.PropTypes.string.isRequired
+    };
+
     componentDidMount () {
         this.player = YoutubePlayerBindings(
             this.refPlayer,
@@ -13,7 +20,10 @@ export default class YoutubePlayer extends React.Component {
                 }
             }
         );
-        this.player.loadVideoById('RnBT9uUYb1w');
+
+        this.player.loadVideoById(
+            this.props.videoId
+        );
     }
 
     render() {
