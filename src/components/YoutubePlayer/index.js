@@ -1,4 +1,2 @@
 
-export default class YoutubePlayer extends React.Component {
-
-}
+export { default } from './YoutubePlayer';
