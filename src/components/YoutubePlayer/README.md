@@ -1,4 +1,4 @@
-Basic YoutubePlayer:
+This is a React component that encapsulates YouTube IFrame Player API and exposes configuration:
 
 ```javascript
 <YoutubePlayer videoId="RnBT9uUYb1w"/>
