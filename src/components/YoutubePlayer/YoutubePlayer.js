@@ -7,7 +7,24 @@ import {default as YoutubePlayerBindings} from 'youtube-player';
  */
 export default class YoutubePlayer extends React.Component {
     static propTypes = {
-        videoId: React.PropTypes.string.isRequired
+        videoId: React.PropTypes.string.isRequired,
+        configuration: React.PropTypes.shape({
+            autoplay: React.PropTypes.oneOf([0, 1]),
+            color: React.PropTypes.oneOf(['red', 'white']),
+            theme: React.PropTypes.oneOf(['dark', 'light'])
+        }),
+        height: React.PropTypes.string,
+        width: React.PropTypes.string,
+    };
+
+    static defaultProps = {
+        configuration: {
+            autoplay: 1,
+            color: 'white',
+            theme: 'light',
+        },
+        height: null,
+        width: '100%'
     };
 
     componentDidMount () {
@@ -27,10 +44,12 @@ export default class YoutubePlayer extends React.Component {
     }
 
     render() {
+        const {width, height} = this.props;
+
         const style = {
-            display: 'block',
-            height: '100%',
-            width: '100%'
+            'display': 'block',
+            'width': width,
+            'height': height
         };
 
         return (
